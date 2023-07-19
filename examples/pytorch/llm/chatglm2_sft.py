@@ -11,7 +11,7 @@ pip install numpy -U  # Resolve torchmetrics dependencies and update numpy
 
 from _common import *
 
-device_ids = [0, 1]
+device_ids = [0]
 select_device(device_ids)
 seed_everything(42)
 
@@ -21,7 +21,7 @@ WORK_DIR = 'runs/chatglm2'
 model_dir = snapshot_download('ZhipuAI/chatglm2-6b', 'v1.0.6')
 model, tokenizer = get_chatglm2_model_tokenizer(model_dir)
 #
-GRADIENT_CHECKPOINTING = True
+GRADIENT_CHECKPOINTING = False
 if GRADIENT_CHECKPOINTING:
     model.gradient_checkpointing_enable()
     model.enable_input_require_grads()
