@@ -1,0 +1,375 @@
+[2023-07-19 17:16:47,271] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2023-07-19 17:16:47.883518: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+2023-07-19 17:16:49,078 - modelscope - INFO - PyTorch version 2.0.1+cu117 Found.
+2023-07-19 17:16:49,083 - modelscope - INFO - Loading ast index from /mnt/workspace/.cache/modelscope/ast_indexer
+2023-07-19 17:16:49,203 - modelscope - INFO - Loading done! Current index file version is 1.7.0, with md5 97a95dc2d7da943e1cea5484a79569dc and a total number of 861 components indexed
+2023-07-19 17:16:49,995 - modelscope - INFO - Using device: cuda:0
+2023-07-19 17:16:49,997 - modelscope - INFO - Global seed set to 42
+2023-07-19 17:16:50,337 - modelscope - INFO - Use user-specified model revision: v1.0.6
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'ChatGLMTokenizer'. 
+The class this function is called from is 'ChatGLM2Tokenizer'.
+2023-07-19 17:16:50,703 - modelscope - INFO - initialize model from /mnt/workspace/.cache/modelscope/ZhipuAI/chatglm2-6b
+The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:38<00:00,  5.47s/it]
+2023-07-19 17:17:30,986 - modelscope - INFO - bos_token_id: 1, eos_token_id: 2, pad_token_id: 2
+2023-07-19 17:17:30,986 - modelscope - INFO - lora_config: LoRAConfig(rank=8, replace_modules=['query_key_value'], lora_alpha=32, lora_dropout=0.1, merge_weights=True, use_merged_linear=False, enable_lora=None, fan_in_fan_out=False, bias='none', only_lora_trainable=True, pretrained_weights=None)
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.embedding.word_embeddings.weight: requires_grad=False
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.encoder.layers.0.input_layernorm.weight: requires_grad=False
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.encoder.layers.0.self_attention.query_key_value.weight: requires_grad=False
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.encoder.layers.0.self_attention.query_key_value.bias: requires_grad=False
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.encoder.layers.0.self_attention.query_key_value.lora_A: requires_grad=True
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.encoder.layers.0.self_attention.query_key_value.lora_B: requires_grad=True
+2023-07-19 17:17:37,257 - modelscope - INFO - transformer.encoder.layers.0.self_attention.dense.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.0.post_attention_layernorm.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.0.mlp.dense_h_to_4h.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.0.mlp.dense_4h_to_h.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.input_layernorm.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.self_attention.query_key_value.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.self_attention.query_key_value.bias: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.self_attention.query_key_value.lora_A: requires_grad=True
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.self_attention.query_key_value.lora_B: requires_grad=True
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.self_attention.dense.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.post_attention_layernorm.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.mlp.dense_h_to_4h.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.1.mlp.dense_4h_to_h.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - transformer.encoder.layers.2.input_layernorm.weight: requires_grad=False
+2023-07-19 17:17:37,258 - modelscope - INFO - ...
+2023-07-19 17:17:37,260 - modelscope - INFO - ChatGLM2ForConditionalGeneration: 6245.5337M Params (1.9497M Trainable), 0.0000M Buffers.
+2023-07-19 17:17:37,262 - modelscope - INFO - device: cuda:0, dtype: torch.float16
+2023-07-19 17:17:38,618 - modelscope - INFO - No subset_name specified, defaulting to the default
+2023-07-19 17:17:39,153 - modelscope - WARNING - Reusing dataset alpaca-gpt4-data-en (/root/.cache/modelscope/hub/datasets/AI-ModelScope/alpaca-gpt4-data-en/master/data_files)
+2023-07-19 17:17:39,153 - modelscope - INFO - Generating dataset alpaca-gpt4-data-en (/root/.cache/modelscope/hub/datasets/AI-ModelScope/alpaca-gpt4-data-en/master/data_files)
+2023-07-19 17:17:39,153 - modelscope - INFO - Loading meta-data file ...
+999584it [00:01, 666888.48it/s]
+Downloading data files: 0it [00:00, ?it/s]
+Extracting data files: 0it [00:00, ?it/s]
+2023-07-19 17:17:44,069 - modelscope - INFO - No subset_name specified, defaulting to the default
+2023-07-19 17:17:44,507 - modelscope - WARNING - Reusing dataset alpaca-gpt4-data-zh (/root/.cache/modelscope/hub/datasets/AI-ModelScope/alpaca-gpt4-data-zh/master/data_files)
+2023-07-19 17:17:44,507 - modelscope - INFO - Generating dataset alpaca-gpt4-data-zh (/root/.cache/modelscope/hub/datasets/AI-ModelScope/alpaca-gpt4-data-zh/master/data_files)
+2023-07-19 17:17:44,507 - modelscope - INFO - Loading meta-data file ...
+339623it [00:01, 253500.98it/s]
+Downloading data files: 0it [00:00, ?it/s]
+Extracting data files: 0it [00:00, ?it/s]
+2023-07-19 17:19:44,693 - modelscope - INFO - Dataset Token Length: 165.599633±119.878531, min=15.000000, max=849.000000, size=99811                                                                   
+2023-07-19 17:19:44,819 - modelscope - INFO - Dataset Token Length: 161.572844±117.029432, min=17.000000, max=760.000000, size=1009
+[INPUT_IDS] [64790, 64792, 5038, 30954, 44266, 37932, 31930, 36454, 44567, 35081, 41252, 31155, 13, 23833, 30954, 30910, 30910, 30939, 30930, 30910, 33954, 13, 30943, 30930, 30910, 37932, 13, 30966, 30930, 30910, 34843, 13, 30972, 30930, 30910, 32375, 13, 30970, 30930, 30910, 31898, 31829, 13, 30978, 30930, 30910, 31821, 37932, 13, 30981, 30930, 30910, 34192, 34040, 13, 30973, 30930, 30910, 32128, 32546, 54545, 13, 30969, 30930, 36680, 54971, 31775, 13, 30939, 30940, 30930, 30910, 54862, 55167, 31709, 2]
+[INPUT] Human: 用心理学领域生成十个独特的单词。
+AI:  1. 认知
+2. 心理学
+3. 焦虑
+4. 自我
+5. 行为主义
+6. 积极心理学
+7. 睡眠障碍
+8. 心理动力学
+9. 人际关系
+10. 调适能力
+
+[LABLES_IDS] [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 30910, 30939, 30930, 30910, 33954, 13, 30943, 30930, 30910, 37932, 13, 30966, 30930, 30910, 34843, 13, 30972, 30930, 30910, 32375, 13, 30970, 30930, 30910, 31898, 31829, 13, 30978, 30930, 30910, 31821, 37932, 13, 30981, 30930, 30910, 34192, 34040, 13, 30973, 30930, 30910, 32128, 32546, 54545, 13, 30969, 30930, 36680, 54971, 31775, 13, 30939, 30940, 30930, 30910, 54862, 55167, 31709, 2]
+[LABLES]  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  1. 认知
+2. 心理学
+3. 焦虑
+4. 自我
+5. 行为主义
+6. 积极心理学
+7. 睡眠障碍
+8. 心理动力学
+9. 人际关系
+10. 调适能力
+2023-07-19 17:19:44,820 - modelscope - INFO - work_dir: /mnt/workspace/modelscope/examples/pytorch/llm/runs/chatglm2/v0-20230719-171944
+2023-07-19 17:19:44,823 - modelscope - WARNING - ('CUSTOM_DATASETS', 'chat', 'chatglm2-6b') not found in ast index file
+** build_dataset error log: 'chatglm2-6b is not in the custom_datasets registry group chat. Please make sure the correct version of ModelScope library is used.'
+2023-07-19 17:19:44,823 - modelscope - WARNING - ('CUSTOM_DATASETS', 'chat', 'chatglm2-6b') not found in ast index file
+** build_dataset error log: 'chatglm2-6b is not in the custom_datasets registry group chat. Please make sure the correct version of ModelScope library is used.'
+2023-07-19 17:19:44,835 - modelscope - INFO - ==========================Training Config Start==========================
+2023-07-19 17:19:44,835 - modelscope - INFO - {
+    "framework": "pytorch",
+    "task": "chat",
+    "pipeline": {
+        "type": "chatglm2_6b-text-generation"
+    },
+    "model": {
+        "type": "chatglm2-6b"
+    },
+    "allow_remote": true,
+    "train": {
+        "hooks": [
+            {
+                "type": "TensorboardHook",
+                "by_epoch": false,
+                "interval": 5
+            }
+        ],
+        "dataloader": {
+            "batch_size_per_gpu": 1,
+            "workers_per_gpu": 1,
+            "shuffle": true,
+            "drop_last": true,
+            "pin_memory": true
+        },
+        "max_epochs": 1,
+        "work_dir": "/mnt/workspace/modelscope/examples/pytorch/llm/runs/chatglm2/v0-20230719-171944",
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0001,
+            "weight_decay": 0.01,
+            "options": {
+                "cumulative_iters": 16,
+                "grad_clip": {
+                    "norm_type": 2,
+                    "max_norm": 2.0
+                }
+            }
+        },
+        "lr_scheduler": {
+            "type": "CosineAnnealingLR",
+            "T_max": 99811,
+            "eta_min": 1e-05,
+            "options": {
+                "by_epoch": false,
+                "warmup": {
+                    "type": "LinearWarmup",
+                    "warmup_ratio": 0.1,
+                    "warmup_iters": 200
+                }
+            }
+        },
+        "checkpoint": {
+            "period": {
+                "by_epoch": false,
+                "interval": 500,
+                "max_checkpoint_num": 1
+            },
+            "best": {
+                "metric_key": "acc",
+                "save_best": true,
+                "rule": "max",
+                "max_checkpoint_num": 1
+            }
+        },
+        "logging": {
+            "by_epoch": true,
+            "interval": 5
+        }
+    },
+    "evaluation": {
+        "dataloader": {
+            "batch_size_per_gpu": 1,
+            "workers_per_gpu": 1,
+            "shuffle": false,
+            "drop_last": false,
+            "pin_memory": true
+        },
+        "metrics": [
+            {
+                "type": "my_metric",
+                "vocab_size": 64794
+            }
+        ],
+        "period": {
+            "by_epoch": false,
+            "interval": 500
+        }
+    }
+}
+2023-07-19 17:19:44,835 - modelscope - INFO - ===========================Training Config End===========================
+2023-07-19 17:19:44,836 - modelscope - WARNING - ('OPTIMIZER', 'default', 'AdamW') not found in ast index file
+2023-07-19 17:19:44,837 - modelscope - WARNING - ('LR_SCHEDULER', 'default', 'CosineAnnealingLR') not found in ast index file
+2023-07-19 17:19:44,839 - modelscope - INFO - Stage: before_run:
+    (ABOVE_NORMAL) OptimizerHook                      
+    (LOW         ) LrSchedulerHook                    
+    (LOW         ) BestCkptSaverHook                  
+    (LOW         ) CheckpointHook                     
+    (VERY_LOW    ) TextLoggerHook                     
+    (VERY_LOW    ) TensorboardHook                    
+ -------------------- 
+Stage: before_train_epoch:
+    (LOW         ) LrSchedulerHook                    
+ -------------------- 
+Stage: before_train_iter:
+    (ABOVE_NORMAL) OptimizerHook                      
+ -------------------- 
+Stage: after_train_iter:
+    (ABOVE_NORMAL) OptimizerHook                      
+    (NORMAL      ) EvaluationHook                     
+    (LOW         ) LrSchedulerHook                    
+    (LOW         ) BestCkptSaverHook                  
+    (LOW         ) CheckpointHook                     
+    (VERY_LOW    ) TextLoggerHook                     
+    (VERY_LOW    ) TensorboardHook                    
+ -------------------- 
+Stage: after_train_epoch:
+    (NORMAL      ) EvaluationHook                     
+    (LOW         ) LrSchedulerHook                    
+    (LOW         ) BestCkptSaverHook                  
+    (LOW         ) CheckpointHook                     
+    (VERY_LOW    ) TextLoggerHook                     
+    (VERY_LOW    ) TensorboardHook                    
+ -------------------- 
+Stage: after_val_epoch:
+    (VERY_LOW    ) TextLoggerHook                     
+    (VERY_LOW    ) TensorboardHook                    
+ -------------------- 
+Stage: after_run:
+    (LOW         ) BestCkptSaverHook                  
+    (LOW         ) CheckpointHook                     
+    (VERY_LOW    ) TensorboardHook                    
+ -------------------- 
+2023-07-19 17:19:44,846 - modelscope - INFO - Checkpoints will be saved to /mnt/workspace/modelscope/examples/pytorch/llm/runs/chatglm2/v0-20230719-171944
+2023-07-19 17:19:44,847 - modelscope - INFO - Checkpoints will be saved to /mnt/workspace/modelscope/examples/pytorch/llm/runs/chatglm2/v0-20230719-171944
+2023-07-19 17:19:44,847 - modelscope - INFO - Text logs will be saved to /mnt/workspace/modelscope/examples/pytorch/llm/runs/chatglm2/v0-20230719-171944
+2023-07-19 17:19:44,848 - modelscope - INFO - tensorboard files will be saved to /mnt/workspace/modelscope/examples/pytorch/llm/runs/chatglm2/v0-20230719-171944/tensorboard_output
+2023-07-19 17:19:48,733 - modelscope - INFO - epoch [1][5/99811]        lr: 1.000e-05, memory: 13212, loss: 2.6695
+2023-07-19 17:19:49,509 - modelscope - INFO - epoch [1][10/99811]       lr: 1.000e-05, memory: 13909, loss: 1.8617
+2023-07-19 17:19:50,396 - modelscope - INFO - epoch [1][15/99811]       lr: 1.000e-05, memory: 14205, loss: 2.5016
+2023-07-19 17:19:51,131 - modelscope - INFO - epoch [1][20/99811]       lr: 1.225e-05, memory: 14205, loss: 3.2281
+2023-07-19 17:19:51,754 - modelscope - INFO - epoch [1][25/99811]       lr: 1.450e-05, memory: 14205, loss: 2.4984
+2023-07-19 17:19:52,342 - modelscope - INFO - epoch [1][30/99811]       lr: 1.675e-05, memory: 14205, loss: 2.6063
+2023-07-19 17:19:53,342 - modelscope - INFO - epoch [1][35/99811]       lr: 1.900e-05, memory: 15073, loss: 2.4766
+2023-07-19 17:19:54,351 - modelscope - INFO - epoch [1][40/99811]       lr: 2.125e-05, memory: 15202, loss: 2.6578
+2023-07-19 17:19:55,237 - modelscope - INFO - epoch [1][45/99811]       lr: 2.350e-05, memory: 15202, loss: 2.1750
+2023-07-19 17:19:55,926 - modelscope - INFO - epoch [1][50/99811]       lr: 2.575e-05, memory: 15202, loss: 2.6859
+2023-07-19 17:19:56,830 - modelscope - INFO - epoch [1][55/99811]       lr: 2.800e-05, memory: 15202, loss: 2.0250
+2023-07-19 17:19:57,553 - modelscope - INFO - epoch [1][60/99811]       lr: 3.025e-05, memory: 15202, loss: 3.1313
+2023-07-19 17:19:58,290 - modelscope - INFO - epoch [1][65/99811]       lr: 3.250e-05, memory: 15202, loss: 3.1203
+2023-07-19 17:19:59,273 - modelscope - INFO - epoch [1][70/99811]       lr: 3.475e-05, memory: 16248, loss: 2.4969
+2023-07-19 17:20:00,036 - modelscope - INFO - epoch [1][75/99811]       lr: 3.700e-05, memory: 16248, loss: 1.7688
+2023-07-19 17:20:00,592 - modelscope - INFO - epoch [1][80/99811]       lr: 3.925e-05, memory: 16248, loss: 3.3156
+2023-07-19 17:20:01,205 - modelscope - INFO - epoch [1][85/99811]       lr: 4.150e-05, memory: 16248, loss: 2.8297
+2023-07-19 17:20:01,843 - modelscope - INFO - epoch [1][90/99811]       lr: 4.375e-05, memory: 16248, loss: 2.1891
+2023-07-19 17:20:02,431 - modelscope - INFO - epoch [1][95/99811]       lr: 4.600e-05, memory: 16248, loss: 2.7313
+2023-07-19 17:20:03,301 - modelscope - INFO - epoch [1][100/99811]      lr: 4.825e-05, memory: 16248, loss: 2.0648
+2023-07-19 17:20:03,873 - modelscope - INFO - epoch [1][105/99811]      lr: 5.050e-05, memory: 16248, loss: 3.2281
+2023-07-19 17:20:04,504 - modelscope - INFO - epoch [1][110/99811]      lr: 5.275e-05, memory: 16248, loss: 1.8000
+2023-07-19 17:20:05,138 - modelscope - INFO - epoch [1][115/99811]      lr: 5.500e-05, memory: 16248, loss: 1.8797
+2023-07-19 17:20:05,827 - modelscope - INFO - epoch [1][120/99811]      lr: 5.725e-05, memory: 16248, loss: 2.4422
+2023-07-19 17:20:06,558 - modelscope - INFO - epoch [1][125/99811]      lr: 5.950e-05, memory: 16248, loss: 2.6094
+2023-07-19 17:20:07,266 - modelscope - INFO - epoch [1][130/99811]      lr: 6.175e-05, memory: 16248, loss: 2.4500
+2023-07-19 17:20:08,077 - modelscope - INFO - epoch [1][135/99811]      lr: 6.400e-05, memory: 16248, loss: 2.5125
+2023-07-19 17:20:08,847 - modelscope - INFO - epoch [1][140/99811]      lr: 6.625e-05, memory: 16248, loss: 2.2891
+2023-07-19 17:20:09,776 - modelscope - INFO - epoch [1][145/99811]      lr: 6.850e-05, memory: 16248, loss: 2.1859
+2023-07-19 17:20:10,453 - modelscope - INFO - epoch [1][150/99811]      lr: 7.075e-05, memory: 16248, loss: 2.7156
+2023-07-19 17:20:11,265 - modelscope - INFO - epoch [1][155/99811]      lr: 7.300e-05, memory: 16248, loss: 2.0781
+2023-07-19 17:20:11,872 - modelscope - INFO - epoch [1][160/99811]      lr: 7.525e-05, memory: 16248, loss: 3.0578
+2023-07-19 17:20:12,633 - modelscope - INFO - epoch [1][165/99811]      lr: 7.750e-05, memory: 16248, loss: 2.6984
+2023-07-19 17:20:13,536 - modelscope - INFO - epoch [1][170/99811]      lr: 7.975e-05, memory: 16248, loss: 2.8000
+2023-07-19 17:20:14,257 - modelscope - INFO - epoch [1][175/99811]      lr: 8.200e-05, memory: 16248, loss: 2.8062
+2023-07-19 17:20:15,021 - modelscope - INFO - epoch [1][180/99811]      lr: 8.425e-05, memory: 16248, loss: 2.3297
+2023-07-19 17:20:15,916 - modelscope - INFO - epoch [1][185/99811]      lr: 8.650e-05, memory: 16248, loss: 2.4109
+2023-07-19 17:20:16,645 - modelscope - INFO - epoch [1][190/99811]      lr: 8.875e-05, memory: 16248, loss: 2.8781
+2023-07-19 17:20:17,481 - modelscope - INFO - epoch [1][195/99811]      lr: 9.100e-05, memory: 16248, loss: 1.9703
+2023-07-19 17:20:18,083 - modelscope - INFO - epoch [1][200/99811]      lr: 9.325e-05, memory: 16248, loss: 3.0531
+2023-07-19 17:20:19,099 - modelscope - INFO - epoch [1][205/99811]      lr: 9.550e-05, memory: 16248, loss: 2.6297
+2023-07-19 17:20:19,984 - modelscope - INFO - epoch [1][210/99811]      lr: 9.775e-05, memory: 16248, loss: 2.0797
+2023-07-19 17:20:20,922 - modelscope - INFO - epoch [1][215/99811]      lr: 1.000e-04, memory: 16248, loss: 3.0187
+2023-07-19 17:20:21,675 - modelscope - INFO - epoch [1][220/99811]      lr: 1.000e-04, memory: 16248, loss: 1.9668
+2023-07-19 17:20:22,361 - modelscope - INFO - epoch [1][225/99811]      lr: 1.000e-04, memory: 16248, loss: 2.5766
+2023-07-19 17:20:23,215 - modelscope - INFO - epoch [1][230/99811]      lr: 1.000e-04, memory: 16248, loss: 2.9906
+2023-07-19 17:20:23,782 - modelscope - INFO - epoch [1][235/99811]      lr: 1.000e-04, memory: 16248, loss: 2.7219
+2023-07-19 17:20:24,679 - modelscope - INFO - epoch [1][240/99811]      lr: 1.000e-04, memory: 16248, loss: 1.9250
+2023-07-19 17:20:25,316 - modelscope - INFO - epoch [1][245/99811]      lr: 1.000e-04, memory: 16248, loss: 2.3922
+2023-07-19 17:20:26,337 - modelscope - INFO - epoch [1][250/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9281
+2023-07-19 17:20:27,105 - modelscope - INFO - epoch [1][255/99811]      lr: 1.000e-04, memory: 17146, loss: 1.8758
+2023-07-19 17:20:27,801 - modelscope - INFO - epoch [1][260/99811]      lr: 1.000e-04, memory: 17146, loss: 3.0953
+2023-07-19 17:20:28,771 - modelscope - INFO - epoch [1][265/99811]      lr: 1.000e-04, memory: 17146, loss: 1.7203
+2023-07-19 17:20:29,870 - modelscope - INFO - epoch [1][270/99811]      lr: 1.000e-04, memory: 17146, loss: 2.7672
+2023-07-19 17:20:30,530 - modelscope - INFO - epoch [1][275/99811]      lr: 1.000e-04, memory: 17146, loss: 2.5125
+2023-07-19 17:20:31,128 - modelscope - INFO - epoch [1][280/99811]      lr: 1.000e-04, memory: 17146, loss: 2.5422
+2023-07-19 17:20:31,688 - modelscope - INFO - epoch [1][285/99811]      lr: 1.000e-04, memory: 17146, loss: 2.3109
+2023-07-19 17:20:32,477 - modelscope - INFO - epoch [1][290/99811]      lr: 1.000e-04, memory: 17146, loss: 2.2344
+2023-07-19 17:20:33,137 - modelscope - INFO - epoch [1][295/99811]      lr: 1.000e-04, memory: 17146, loss: 2.0086
+2023-07-19 17:20:33,843 - modelscope - INFO - epoch [1][300/99811]      lr: 1.000e-04, memory: 17146, loss: 2.4117
+2023-07-19 17:20:34,526 - modelscope - INFO - epoch [1][305/99811]      lr: 1.000e-04, memory: 17146, loss: 3.0016
+2023-07-19 17:20:35,419 - modelscope - INFO - epoch [1][310/99811]      lr: 1.000e-04, memory: 17146, loss: 1.5379
+2023-07-19 17:20:36,228 - modelscope - INFO - epoch [1][315/99811]      lr: 1.000e-04, memory: 17146, loss: 1.6609
+2023-07-19 17:20:36,900 - modelscope - INFO - epoch [1][320/99811]      lr: 1.000e-04, memory: 17146, loss: 2.9781
+2023-07-19 17:20:37,726 - modelscope - INFO - epoch [1][325/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9133
+2023-07-19 17:20:38,445 - modelscope - INFO - epoch [1][330/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9922
+2023-07-19 17:20:39,227 - modelscope - INFO - epoch [1][335/99811]      lr: 1.000e-04, memory: 17146, loss: 2.6281
+2023-07-19 17:20:40,075 - modelscope - INFO - epoch [1][340/99811]      lr: 1.000e-04, memory: 17146, loss: 1.7852
+2023-07-19 17:20:40,814 - modelscope - INFO - epoch [1][345/99811]      lr: 1.000e-04, memory: 17146, loss: 2.9875
+2023-07-19 17:20:41,629 - modelscope - INFO - epoch [1][350/99811]      lr: 1.000e-04, memory: 17146, loss: 1.5992
+2023-07-19 17:20:42,277 - modelscope - INFO - epoch [1][355/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1453
+2023-07-19 17:20:43,130 - modelscope - INFO - epoch [1][360/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1859
+2023-07-19 17:20:43,725 - modelscope - INFO - epoch [1][365/99811]      lr: 1.000e-04, memory: 17146, loss: 2.3016
+2023-07-19 17:20:44,316 - modelscope - INFO - epoch [1][370/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9563
+2023-07-19 17:20:45,056 - modelscope - INFO - epoch [1][375/99811]      lr: 1.000e-04, memory: 17146, loss: 1.5695
+2023-07-19 17:20:45,709 - modelscope - INFO - epoch [1][380/99811]      lr: 1.000e-04, memory: 17146, loss: 2.4969
+2023-07-19 17:20:46,391 - modelscope - INFO - epoch [1][385/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9078
+2023-07-19 17:20:47,221 - modelscope - INFO - epoch [1][390/99811]      lr: 1.000e-04, memory: 17146, loss: 2.4188
+2023-07-19 17:20:47,863 - modelscope - INFO - epoch [1][395/99811]      lr: 1.000e-04, memory: 17146, loss: 1.8445
+2023-07-19 17:20:48,748 - modelscope - INFO - epoch [1][400/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1656
+2023-07-19 17:20:49,711 - modelscope - INFO - epoch [1][405/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1250
+2023-07-19 17:20:50,346 - modelscope - INFO - epoch [1][410/99811]      lr: 1.000e-04, memory: 17146, loss: 2.2406
+2023-07-19 17:20:51,219 - modelscope - INFO - epoch [1][415/99811]      lr: 1.000e-04, memory: 17146, loss: 1.8609
+2023-07-19 17:20:51,969 - modelscope - INFO - epoch [1][420/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9480
+2023-07-19 17:20:52,634 - modelscope - INFO - epoch [1][425/99811]      lr: 1.000e-04, memory: 17146, loss: 1.2348
+2023-07-19 17:20:53,326 - modelscope - INFO - epoch [1][430/99811]      lr: 1.000e-04, memory: 17146, loss: 1.5367
+2023-07-19 17:20:54,140 - modelscope - INFO - epoch [1][435/99811]      lr: 1.000e-04, memory: 17146, loss: 1.6719
+2023-07-19 17:20:54,911 - modelscope - INFO - epoch [1][440/99811]      lr: 1.000e-04, memory: 17146, loss: 2.3340
+2023-07-19 17:20:55,528 - modelscope - INFO - epoch [1][445/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1984
+2023-07-19 17:20:56,409 - modelscope - INFO - epoch [1][450/99811]      lr: 1.000e-04, memory: 17146, loss: 1.7422
+2023-07-19 17:20:57,158 - modelscope - INFO - epoch [1][455/99811]      lr: 1.000e-04, memory: 17146, loss: 1.8922
+2023-07-19 17:20:57,975 - modelscope - INFO - epoch [1][460/99811]      lr: 1.000e-04, memory: 17146, loss: 1.4357
+2023-07-19 17:20:58,784 - modelscope - INFO - epoch [1][465/99811]      lr: 1.000e-04, memory: 17146, loss: 1.5781
+2023-07-19 17:20:59,409 - modelscope - INFO - epoch [1][470/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1828
+2023-07-19 17:21:00,187 - modelscope - INFO - epoch [1][475/99811]      lr: 1.000e-04, memory: 17146, loss: 2.0664
+2023-07-19 17:21:01,083 - modelscope - INFO - epoch [1][480/99811]      lr: 1.000e-04, memory: 17146, loss: 2.4375
+2023-07-19 17:21:01,761 - modelscope - INFO - epoch [1][485/99811]      lr: 1.000e-04, memory: 17146, loss: 2.0375
+2023-07-19 17:21:02,451 - modelscope - INFO - epoch [1][490/99811]      lr: 1.000e-04, memory: 17146, loss: 2.1953
+2023-07-19 17:21:03,351 - modelscope - INFO - epoch [1][495/99811]      lr: 1.000e-04, memory: 17146, loss: 1.8125
+2023-07-19 17:21:04,026 - modelscope - WARNING - ('METRICS', 'default', 'my_metric') not found in ast index file
+Total test samples: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1009/1009 [01:14<00:00, 13.54it/s]
+2023-07-19 17:22:18,559 - modelscope - INFO - Saving checkpoint at 500 iter
+2023-07-19 17:22:18,592 - modelscope - INFO - Saving checkpoint at 500 iter
+2023-07-19 17:22:18,624 - modelscope - INFO - epoch(eval) [1][1009]     memory: 17146, evaluation/acc: 0.6082, evaluation/loss: 1.9363, loss: 2.1891
+2023-07-19 17:22:19,376 - modelscope - INFO - epoch [1][505/99811]      lr: 1.000e-04, memory: 17146, loss: 2.2531
+2023-07-19 17:22:20,060 - modelscope - INFO - epoch [1][510/99811]      lr: 1.000e-04, memory: 17146, loss: 1.8383
+2023-07-19 17:22:20,815 - modelscope - INFO - epoch [1][515/99811]      lr: 1.000e-04, memory: 17146, loss: 1.7008
+2023-07-19 17:22:21,523 - modelscope - INFO - epoch [1][520/99811]      lr: 1.000e-04, memory: 17146, loss: 1.9609
+2023-07-19 17:22:22,353 - modelscope - INFO - epoch [1][525/99811]      lr: 1.000e-04, memory: 17146, loss: 1.4754
+2023-07-19 17:22:23,231 - modelscope - INFO - epoch [1][530/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8760
+2023-07-19 17:22:24,218 - modelscope - INFO - epoch [1][535/99811]      lr: 9.999e-05, memory: 17146, loss: 2.3422
+2023-07-19 17:22:25,093 - modelscope - INFO - epoch [1][540/99811]      lr: 9.999e-05, memory: 17146, loss: 1.7656
+2023-07-19 17:22:25,807 - modelscope - INFO - epoch [1][545/99811]      lr: 9.999e-05, memory: 17146, loss: 2.4625
+2023-07-19 17:22:26,522 - modelscope - INFO - epoch [1][550/99811]      lr: 9.999e-05, memory: 17146, loss: 1.7797
+2023-07-19 17:22:27,308 - modelscope - INFO - epoch [1][555/99811]      lr: 9.999e-05, memory: 17146, loss: 2.2437
+2023-07-19 17:22:27,988 - modelscope - INFO - epoch [1][560/99811]      lr: 9.999e-05, memory: 17146, loss: 2.1094
+2023-07-19 17:22:28,695 - modelscope - INFO - epoch [1][565/99811]      lr: 9.999e-05, memory: 17146, loss: 2.0781
+2023-07-19 17:22:29,725 - modelscope - INFO - epoch [1][570/99811]      lr: 9.999e-05, memory: 17146, loss: 1.4699
+2023-07-19 17:22:30,839 - modelscope - INFO - epoch [1][575/99811]      lr: 9.999e-05, memory: 17146, loss: 1.9047
+2023-07-19 17:22:31,613 - modelscope - INFO - epoch [1][580/99811]      lr: 9.999e-05, memory: 17146, loss: 2.1953
+2023-07-19 17:22:32,165 - modelscope - INFO - epoch [1][585/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8234
+2023-07-19 17:22:32,751 - modelscope - INFO - epoch [1][590/99811]      lr: 9.999e-05, memory: 17146, loss: 1.9812
+2023-07-19 17:22:33,438 - modelscope - INFO - epoch [1][595/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8039
+2023-07-19 17:22:34,086 - modelscope - INFO - epoch [1][600/99811]      lr: 9.999e-05, memory: 17146, loss: 2.0812
+2023-07-19 17:22:34,751 - modelscope - INFO - epoch [1][605/99811]      lr: 9.999e-05, memory: 17146, loss: 2.0859
+2023-07-19 17:22:35,723 - modelscope - INFO - epoch [1][610/99811]      lr: 9.999e-05, memory: 17146, loss: 1.6078
+2023-07-19 17:22:36,629 - modelscope - INFO - epoch [1][615/99811]      lr: 9.999e-05, memory: 17146, loss: 1.6922
+2023-07-19 17:22:37,408 - modelscope - INFO - epoch [1][620/99811]      lr: 9.999e-05, memory: 17146, loss: 2.0547
+2023-07-19 17:22:38,284 - modelscope - INFO - epoch [1][625/99811]      lr: 9.999e-05, memory: 17146, loss: 1.9578
+2023-07-19 17:22:38,925 - modelscope - INFO - epoch [1][630/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8109
+2023-07-19 17:22:39,784 - modelscope - INFO - epoch [1][635/99811]      lr: 9.999e-05, memory: 17146, loss: 1.6359
+2023-07-19 17:22:40,388 - modelscope - INFO - epoch [1][640/99811]      lr: 9.999e-05, memory: 17146, loss: 1.5656
+2023-07-19 17:22:41,125 - modelscope - INFO - epoch [1][645/99811]      lr: 9.999e-05, memory: 17146, loss: 1.5840
+2023-07-19 17:22:41,898 - modelscope - INFO - epoch [1][650/99811]      lr: 9.999e-05, memory: 17146, loss: 1.7000
+2023-07-19 17:22:42,551 - modelscope - INFO - epoch [1][655/99811]      lr: 9.999e-05, memory: 17146, loss: 1.9266
+2023-07-19 17:22:43,296 - modelscope - INFO - epoch [1][660/99811]      lr: 9.999e-05, memory: 17146, loss: 2.2734
+2023-07-19 17:22:43,998 - modelscope - INFO - epoch [1][665/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8922
+2023-07-19 17:22:44,634 - modelscope - INFO - epoch [1][670/99811]      lr: 9.999e-05, memory: 17146, loss: 1.3625
+2023-07-19 17:22:45,388 - modelscope - INFO - epoch [1][675/99811]      lr: 9.999e-05, memory: 17146, loss: 1.9016
+2023-07-19 17:22:46,314 - modelscope - INFO - epoch [1][680/99811]      lr: 9.999e-05, memory: 17146, loss: 1.7453
+2023-07-19 17:22:47,034 - modelscope - INFO - epoch [1][685/99811]      lr: 9.999e-05, memory: 17146, loss: 1.2242
+2023-07-19 17:22:47,782 - modelscope - INFO - epoch [1][690/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8531
+2023-07-19 17:22:48,515 - modelscope - INFO - epoch [1][695/99811]      lr: 9.999e-05, memory: 17146, loss: 1.7812
+2023-07-19 17:22:49,209 - modelscope - INFO - epoch [1][700/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8047
+2023-07-19 17:22:50,078 - modelscope - INFO - epoch [1][705/99811]      lr: 9.999e-05, memory: 17146, loss: 1.7109
+2023-07-19 17:22:50,833 - modelscope - INFO - epoch [1][710/99811]      lr: 9.999e-05, memory: 17146, loss: 1.9953
+2023-07-19 17:22:51,465 - modelscope - INFO - epoch [1][715/99811]      lr: 9.999e-05, memory: 17146, loss: 1.6531
+2023-07-19 17:22:52,169 - modelscope - INFO - epoch [1][720/99811]      lr: 9.999e-05, memory: 17146, loss: 1.2898
+2023-07-19 17:22:53,040 - modelscope - INFO - epoch [1][725/99811]      lr: 9.999e-05, memory: 17146, loss: 1.6707
+2023-07-19 17:22:53,697 - modelscope - INFO - epoch [1][730/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8594
+2023-07-19 17:22:54,564 - modelscope - INFO - epoch [1][735/99811]      lr: 9.999e-05, memory: 17146, loss: 1.4805
+2023-07-19 17:22:55,183 - modelscope - INFO - epoch [1][740/99811]      lr: 9.999e-05, memory: 17146, loss: 1.8594
