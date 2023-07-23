@@ -380,12 +380,13 @@ def get_alpaca_en_zh_dataset(
     split: Literal['train', 'validation', None]
     """
 
-    dataset_en: HFDataset = MsDataset.load(
-        'hurner/alpaca-gpt4-data-en', split='train').to_hf_dataset()
+    # dataset_en: HFDataset = MsDataset.load(
+    #     'hurner/alpaca-gpt4-data-en', split='train').to_hf_dataset()
     dataset_zh: HFDataset = MsDataset.load(
         'hurner/alpaca-gpt4-data-zh', split='train').to_hf_dataset()
     dataset_en = dataset_en.remove_columns(['text'])
-    dataset: HFDataset = concatenate_datasets([dataset_zh, dataset_en])
+    # dataset: HFDataset = concatenate_datasets([dataset_zh, dataset_en])
+    dataset: HFDataset = dataset_zh
     #
     # dataset = dataset.select(range(1000))  # for debug
     dataset = dataset.train_test_split(test_split_p, seed=split_seed)
