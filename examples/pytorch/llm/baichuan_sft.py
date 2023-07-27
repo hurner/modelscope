@@ -11,7 +11,7 @@ pip install numpy -U  # Resolve torchmetrics dependencies and update numpy
 
 from _common import *
 
-device_ids = [0, 1]
+device_ids = [0]
 select_device(device_ids)
 seed_everything(42)
 
