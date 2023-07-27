@@ -388,7 +388,7 @@ def get_alpaca_en_zh_dataset(
     # dataset: HFDataset = concatenate_datasets([dataset_zh, dataset_en])
     dataset: HFDataset = dataset_zh
     #
-    # dataset = dataset.select(range(1000))  # for debug
+    dataset = dataset.select(range(1000))  # for debug
     dataset = dataset.train_test_split(test_split_p, seed=split_seed)
     if only_val:
         dataset = dataset['test']
